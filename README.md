@@ -20,9 +20,9 @@ The pipeline was designed without traditional ETL platforms such as SSIS, Azure 
 
 # 🔗 View Scripts
 
-👉 **[LMS Tables Loading](https://app.powerbi.com/)**  
-👉 **[Incremental Loading](https://app.powerbi.com/)** 
-👉 **[Run Batch File](https://app.powerbi.com/)** 
+👉 **[LMS Tables Loading](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/blob/main/Scripts/1.%20LMS%20All%20Tables%20Loading/LMS%20Tables%20Loading.ipynb)**  
+👉 **[Incremental Loading](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/tree/main/Scripts/2.%20Incremental%20Load)** 
+👉 **[Run Batch File](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/tree/main/Scripts/3.%20Run%20Batch%20FIle)** 
 
 ---
 
