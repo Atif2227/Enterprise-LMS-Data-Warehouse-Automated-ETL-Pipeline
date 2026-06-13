@@ -302,33 +302,34 @@ Enabled:
 
 # 📁 Project Structure
 
+```text
 project-root/
 │
 ├── api/
-│ └── LMS API extraction scripts
+│   └── LMS API extraction scripts
 │
 ├── etl/
-│ ├── extraction/
-│ ├── transformation/
-│ └── loading/
+│   ├── extraction/
+│   ├── transformation/
+│   └── loading/
 │
 ├── sql/
-│ ├── tables/
-│ ├── views/
-│ └── procedures/
+│   ├── tables/
+│   ├── views/
+│   └── procedures/
 │
 ├── automation/
-│ ├── batch files
-│ └── scheduler configs
+│   ├── batch files
+│   └── scheduler configs
 │
 ├── dashboards/
-│ └── Power BI files (.pbix)
+│   └── Power BI files (.pbix)
 │
 ├── images/
-│ └── dashboard screenshots
+│   └── dashboard screenshots
 │
 └── README.md
-
+```
 
 ---
 
