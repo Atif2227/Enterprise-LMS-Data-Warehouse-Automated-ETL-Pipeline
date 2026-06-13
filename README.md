@@ -23,7 +23,7 @@ The pipeline was designed without traditional ETL platforms such as SSIS, Azure 
 👉 **[LMS Tables Loading](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/blob/main/Scripts/1.%20LMS%20All%20Tables%20Loading/LMS%20Tables%20Loading.ipynb)**  
 👉 **[Incremental Loading](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/tree/main/Scripts/2.%20Incremental%20Load)** 
 👉 **[Run Batch File](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/tree/main/Scripts/3.%20Run%20Batch%20FIle)** 
-👉 **[ALL LMS SQL Views](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/blob/main/Scripts/4.%20SQL%20Views/All%20LMS%20Tables%20Views.sql).**
+👉 **[ALL LMS SQL Views](https://github.com/Atif2227/Enterprise-LMS-Data-Warehouse-Automated-ETL-Pipeline/blob/main/Scripts/4.%20SQL%20Views/All%20LMS%20Tables%20Views.sql)**
 
 ---
 
