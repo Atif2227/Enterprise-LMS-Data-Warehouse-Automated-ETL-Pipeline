@@ -16,6 +16,103 @@ Using a custom-built Python ETL framework, SQL Server data warehouse layer, and 
 
 The pipeline was designed without traditional ETL platforms such as SSIS, Azure Data Factory, or Microsoft Fabric, demonstrating how a production-grade data platform can be built using core engineering technologies.
 
+## Solution Architecture
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│                         LMS OData API                        │
+│                                                              │
+│  • Enrollments                                               │
+│  • Users                                                     │
+│  • Courses                                                   │
+│  • Attendances                                               │
+│  • Ratings                                                   │
+│  • Other LMS entities                                        │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+                               │ API requests, pagination,
+                               │ expanded entities and JSON
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                     Python ETL Scripts                       │
+│                                                              │
+│  • Extract data using requests                               │
+│  • Process OData pagination using $top and $skip             │
+│  • Expand nested entities using $expand                      │
+│  • Flatten JSON, arrays and related records                   │
+│  • Clean and standardize values                              │
+│  • Prepare relational datasets using pandas                  │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+                               │ pyodbc + fast_executemany
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    SQL Server Data Warehouse                 │
+│                                                              │
+│  • Historical data from 2015–2026                            │
+│  • Centralized LMS tables                                    │
+│  • Batch-loaded historical records                           │
+│  • Incrementally refreshed data                              │
+│  • Overlap-window logic to prevent missing records           │
+│  • Duplicate prevention                                      │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    SQL Transformation Layer                  │
+│                                                              │
+│  • SQL views                                                 │
+│  • Data-type conversion                                      │
+│  • Text cleansing                                            │
+│  • Duplicate removal                                         │
+│  • Standardized business fields                              │
+│  • Reporting-ready fact and dimension structures             │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                      Power BI Data Model                     │
+│                                                              │
+│  Fact Tables                                                 │
+│  • Enrollments                                               │
+│  • Attendances                                               │
+│                                                              │
+│  Dimension Tables                                            │
+│  • Users                                                     │
+│  • Courses                                                   │
+│  • Categories                                                │
+│  • Other LMS dimensions                                      │
+└──────────────────────────────┬───────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                  Power BI Reports & Dashboards               │
+│                                                              │
+│  • Historical analysis                                       │
+│  • Year-over-year comparison                                 │
+│  • Fast report performance                                   │
+│  • Interactive dashboards                                    │
+│  • Operational and management insights                       │
+└──────────────────────────────────────────────────────────────┘
+
+
+Automation Flow
+
+Windows Task Scheduler
+        │
+        ▼
+Batch Scripts (.bat)
+        │
+        ▼
+Python ETL Scripts
+        │
+        ▼
+SQL Server Refresh
+        │
+        ▼
+Power BI Reporting
+```
+
 ---
 
 # 🔗 View Scripts
