@@ -242,39 +242,6 @@ Created a centralized SQL Server data warehouse layer.
 
 ---
 
-# 🔥 End-to-End Architecture
-    ┌───────────────────────────┐
-    │       LMS API (OData)     │
-    │   JSON / Nested Data      │
-    └─────────────┬─────────────┘
-                  ↓
-
-    ┌───────────────────────────┐
-    │     Python ETL Pipeline   │
-    │ Extract | Transform |Load │
-    └─────────────┬─────────────┘
-                  ↓
-
-    ┌───────────────────────────┐
-    │      SQL Server DW        │
-    │ Fact & Dimension Tables   │
-    └─────────────┬─────────────┘
-                  ↓
-
-    ┌───────────────────────────┐
-    │     SQL Views Layer       │
-    │ Semantic Transformation   │
-    └─────────────┬─────────────┘
-                  ↓
-
-    ┌───────────────────────────┐
-    │        Power BI           │
-    │ Dashboards & Analytics    │
-    └───────────────────────────┘
-
-    
----
-
 # 🔄 Incremental Data Pipeline
 
 Designed a production-ready incremental refresh mechanism.
