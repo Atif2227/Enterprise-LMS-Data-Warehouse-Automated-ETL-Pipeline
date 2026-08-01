@@ -1,4 +1,4 @@
-# 🚀 Enterprise LMS Data Warehouse & Automated ETL Pipeline
+# Enterprise On-Premises Data Platform & ETL Automation
 
 **Role:** Data Engineer, BI Consultant & Analytics Architect  
 **Domain:** Learning Management System Analytics  
